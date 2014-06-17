@@ -8,6 +8,7 @@ package com.ws.module;
 import LeoLib.utils.DBPrepared;
 import static LeoLib.utils.DBPrepared.MYSQL_DRIVER;
 import com.ws.controller.ServletBase;
+import static com.ws.util.Constants.*;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -31,9 +32,9 @@ public class getDataJobs extends HttpServlet{
 
         DBPrepared dbp = new DBPrepared(
                 MYSQL_DRIVER,
-                "jdbc:mysql://210.80.86.237:3306/acer_pushapp?useUnicode=true&characterEncoding=utf-8",
-                "acer",
-                "qpwoeiruty");
+                DBConnStr,
+                DBAccount,
+                DBPassword);
         ArrayList<HashMap> resultList = (ArrayList<HashMap>)dbp.getDataListConn(sql, where);
         LeoLib.tools.Toolets.printALHM(resultList);
         
