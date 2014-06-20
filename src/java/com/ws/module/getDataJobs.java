@@ -35,7 +35,7 @@ public class getDataJobs extends HttpServlet{
                 DBConnStr,
                 DBAccount,
                 DBPassword);
-        ArrayList<HashMap> resultList = (ArrayList<HashMap>)dbp.getDataListConn(sql, where);
+        ArrayList<HashMap> resultList = (ArrayList<HashMap>)dbp.getDataListCon(sql, where);
         LeoLib.tools.Toolets.printALHM(resultList);
         
         request.setAttribute("resultList", resultList);

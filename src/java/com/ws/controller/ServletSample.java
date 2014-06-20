@@ -115,7 +115,7 @@ public class ServletSample extends ServletBase {
                     "jdbc:mysql://210.80.86.237:3306/acer_pushapp?useUnicode=true&characterEncoding=utf-8",
                     "acer",
                     "qpwoeiruty");
-            this.dispatchPageXML(dbp.getDataListConn(sql, where));
+            this.dispatchPageXML(dbp.getDataListCon(sql, where));
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(ServletSample.class.getName()).log(Level.SEVERE, null, ex);
         } catch (SQLException ex) {
