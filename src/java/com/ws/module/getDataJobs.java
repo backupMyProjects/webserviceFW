@@ -23,7 +23,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author leo
  */
-public class getDataJobs extends HttpServlet{
+public class getDataJobs{
     public void getUserList(HttpServletRequest request, HttpServletResponse respones) throws Exception {
         String sql = "SELECT * FROM getUser WHERE name=? AND password=?";
         List<String> where = new ArrayList();
